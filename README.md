@@ -4,7 +4,7 @@ This repository contains a code which you are supposed to work with. Please crea
 # Application
 Application is a simulation of a web application which displays data got from REST API. Within this task REST API will be mocked. Please use prepared services to retrieve data.
 
-##Challenge
+## Challenge
 Your task is to adjust existing template of the application and apply all missing components and styles, that will match included designs (within `designs` directory). This task has 2 parts: 
 1. required - part that has to be done
 2. optional - if you have more time, it would be nice to see some parts done too
