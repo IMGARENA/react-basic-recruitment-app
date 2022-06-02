@@ -1,12 +1,47 @@
-# react-basic-recruitment-app
-Basic recruitment application
+# Prerequisites
+This repository contains a code which you are supposed to work with. Please create a fork of this repo. As a result of your task please send us back a link to your github repository. While working with the code, please commit all changes to your repository, for us to check your progress.
 
-# Getting Started with Create React App
+# Application
+Application is a simulation of a web application which displays data got from REST API. Within this task REST API will be mocked. Please use prepared services to retrieve data.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+##Challenge
+Your task is to adjust existing template of the application and apply all missing components and styles, that will match included designs (within `designs` directory). This task has 2 parts: 
+1. required - part that has to be done
+2. optional - if you have more time, it would be nice to see some parts done too
 
-## Available Scripts
+### Required
+1. Dashboard page has to look exactly the same as design
+   1. Each Card component should have a button, which will redirect user to appropriate page, eg. `Sports` should redirect to `/sports`, `Scheduling` should redirect to `/scheduling` (even if it will show an `Page not found 404`)
+2. Top bar should look exactly the same
+   1. Switch and Avatar can be only a plain components without any logic
+3. Left navigation should look exactly the same
+   1. Page `Dashboard` should redirect to `/`
+   2. Page `Sports` should redirect to `/sports`
+   3. Other pages should redirect to according pages eg. `Scheduling` should redirect to `/scheduling`. Content of the page can be `Page not found 404`, but url within browser should point to correct path
+4. Sports page contains:
+   1. Main title
+   2. Teaser text
+   3. Static table filled with data
+      1. Icon does not have to do anything
 
+### Optional
+1. All pages except `dashboard` and `sports` should return a text within main page content, which will say: `This is [PAGE_NAME] page.`, where `[PAGE_NAME]` should be replaced with according name, eg. for scheduling it should  say: `This is scheduling page.`
+2. Switching the theme mode from light to dark and other way round - adapt this logic for a `Switch` visible within Top Bar near user avatar.
+3. Sports page
+   1. Click on the icon should open container on the right side and fill it with details of the sport got from the service
+   2. Click on button `Add sport` should open the same looking container filled with 2 text fields and 2 buttons:
+      1. textfield: name - user can enter any text value
+      2. textfield: location - user can enter any text value
+      3. button: `Save` - when clicked, there should be shown `alert` with text `Submitting sport: [sport.name] with location: [sport.location]` and close the container
+      4. button: `Cancel` - should close container and do not show `alert`
+      5. The layout of this form is up to you - should be clean and usable
+
+### Styles
+For styling the application there is used a library [Material UI](https://mui.com/). 
+Please use as many components that fits design as possible.
+Please do not use `.css`/`.scss`/`.less` or any other preprocessor.
+
+## How to run an application
 In the project directory, you can run:
 
 ### `npm start`
@@ -16,58 +51,3 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
